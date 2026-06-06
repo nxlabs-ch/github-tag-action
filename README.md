@@ -14,10 +14,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Bump version and push tag
         id: tag_version
-        uses: mathieudutour/github-tag-action@v6.2
+        uses: nxlabs-ch/github-tag-action@v6.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create a GitHub release
